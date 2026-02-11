@@ -21,17 +21,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Check secrets exist
-        run: |
-          echo "PROJECT_NUMBER length:"
-          echo "${#GCP_PROJECT_NUMBER}"
-          echo "PROJECT_ID length:"
-          echo "${#GCP_PROJECT_ID}"
-        env:
-          GCP_PROJECT_NUMBER: ${{ secrets.GCP_PROJECT_NUMBER }}
-          GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-
-
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
