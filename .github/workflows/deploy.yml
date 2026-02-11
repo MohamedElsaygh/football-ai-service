@@ -7,7 +7,7 @@ on:
 env:
   REGION: europe-west2
   SERVICE: football-ai-service
-  REPOSITORY: football-repo-uk
+  REPOSITORY: football-repo
 
 jobs:
   deploy:
